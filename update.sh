@@ -27,7 +27,7 @@ if [ "$LANG" == "pt" ]; then
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1"]; then
+    if [ "$OPTION" == "1" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -46,7 +46,7 @@ if [ "$LANG" == "pt" ]; then
         echo """
         Atualizacoes concluidas
         """
-    elif [ "$OPTION" == "2"]; then
+    elif [ "$OPTION" == "2" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -108,7 +108,7 @@ if [ "$LANG" == "en" ]; then
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1"]; then
+    if [ "$OPTION" == "1" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -127,7 +127,7 @@ if [ "$LANG" == "en" ]; then
         echo """
         Complete updates
         """
-    elif [ "$OPTION" == "2"]; then
+    elif [ "$OPTION" == "2" ]; then
         apt update
         apt-get update
         apt upgrade -y;
