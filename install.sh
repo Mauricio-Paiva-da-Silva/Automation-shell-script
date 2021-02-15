@@ -3,7 +3,7 @@
 #--------------------------------------------------#
 #-----Program Author: Maurício Paiva da Silva------#
 #---------Project start date: 02/09/2021-----------#
-#-----------Project end date: 02/dd/2021-------------#
+#----------Project end date: 02/15/2021------------#
 #--------------------------------------------------#
 
 echo """
@@ -13,20 +13,20 @@ Falante de língua portuguesa [pt]
 read LANG
 echo ""
 
-if [ "$LANG" == "pt" ]; then
+if [ "$LANG" -eq "pt" ]; then
 
 ## PORTUGUESE
     echo """
     -------------------------------------
     ESTE SCRIPT RODA APENAS EM MODO ROOT.
-    --------------------------------------
+    -------------------------------------
 
     Opcoes: (1)Iniciante (2)Experiente
     """
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1" ]; then
+    if [ "$OPTION" -eq "1" ]; then
 
         apt install git -y;
         apt install wget -y;
@@ -42,7 +42,7 @@ if [ "$LANG" == "pt" ]; then
         rm -r Apps
         cd ~
 
-    elif [ "$OPTION" == "2" ]; then
+    elif [ "$OPTION" -eq "2" ]; then
 
         apt install git -y;
         apt install wget -y;
@@ -71,13 +71,13 @@ if [ "$LANG" == "pt" ]; then
     read OPTION2
     echo ""
 
-    if [ "$OPTION2" == "s" ]; then
+    if [ "$OPTION2" -eq "s" ]; then
         echo ""
         echo "(1)Reboot or (2)Shutdown?"
         echo ""
         read OPTION3
         echo ""
-        if [ "$OPTION3" == "1" ]; then
+        if [ "$OPTION3" -eq "1" ]; then
             apt update;
             apt-get update;
             apt upgrade;
@@ -94,7 +94,7 @@ if [ "$LANG" == "pt" ]; then
             sleep 4
             reboot now;
 
-        elif [ "$OPTION2" == "2" ]; then
+        elif [ "$OPTION2" -eq "2" ]; then
             apt update;
             apt-get update;
             apt upgrade;
@@ -122,7 +122,7 @@ if [ "$LANG" == "pt" ]; then
 
 else
     echo """
-    -------------------------------------
+    --------------------------------------
     THIS SCRIPT CAN ONLY RUN IN ROOT MODE.
     --------------------------------------
 
@@ -131,7 +131,7 @@ else
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1" ]; then
+    if [ "$OPTION" -eq "1" ]; then
 
         apt install git -y;
         apt install wget -y;
@@ -147,7 +147,7 @@ else
         rm -r Apps
         cd ~
 
-    elif [ "$OPTION" == "2" ]; then
+    elif [ "$OPTION" -eq "2" ]; then
         apt install git -y;
         apt install wget -y;
         mkdir /home/$USER/Downloads/Apps
@@ -174,13 +174,13 @@ else
     read OPTION2
     echo ""
 
-    if [ "$OPTION2" == "y" ]; then
+    if [ "$OPTION2" -eq "y" ]; then
         echo ""
         echo "(1)Reboot or (2)Shutdown?"
         echo ""
         read OPTION3
         echo ""
-        if [ "$OPTION3" == "1" ]; then
+        if [ "$OPTION3" -eq "1" ]; then
             apt update;
             apt-get update;
             apt upgrade;
@@ -197,7 +197,7 @@ else
             sleep 4
             reboot now;
 
-        elif [ "$OPTION2" == "2" ]; then
+        elif [ "$OPTION2" -eq "2" ]; then
             apt update;
             apt-get update;
             apt upgrade;

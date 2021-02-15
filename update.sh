@@ -3,7 +3,7 @@
 #--------------------------------------------------#
 #-----Program Author: Maurício Paiva da Silva------#
 #---------Project start date: 02/10/2021-----------#
-#-----------Project end date: 02/dd/2021-------------#
+#----------Project end date: 02/15/2021------------#
 #--------------------------------------------------#
 
 echo """
@@ -13,7 +13,7 @@ Falante de língua portuguesa [pt]
 read LANG
 echo ""
 
-if [ "$LANG" == "pt" ]; then
+if [ "$LANG" -eq "pt" ]; then
 
 ## PORTUGUESE
 
@@ -27,7 +27,7 @@ if [ "$LANG" == "pt" ]; then
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1" ]; then
+    if [ "$OPTION" -eq "1" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -46,7 +46,7 @@ if [ "$LANG" == "pt" ]; then
         echo """
         Atualizacoes concluidas
         """
-    elif [ "$OPTION" == "2" ]; then
+    elif [ "$OPTION" -eq "2" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -82,11 +82,11 @@ if [ "$LANG" == "pt" ]; then
     (1)Reiniciar (2)Desligar (p)Pular etapa
     """
     read UPD
-    if [ "$UPD" == "1" ]; then
+    if [ "$UPD" -eq "1" ]; then
         reboot now;
-    elif [ "$UPD" == "2" ]; then
+    elif [ "$UPD" -eq "2" ]; then
         shutdown now;
-    elif [ "$UPD" == "p" ]; then
+    elif [ "$UPD" -eq "p" ]; then
         echo "Obrigado pela preferencia"
         exit 1
     else
@@ -94,7 +94,7 @@ if [ "$LANG" == "pt" ]; then
     fi
 fi
 
-if [ "$LANG" == "en" ]; then
+if [ "$LANG" -eq "en" ]; then
 
 ## ENGLISH
 
@@ -108,7 +108,7 @@ if [ "$LANG" == "en" ]; then
     read OPTION
     echo ""
 
-    if [ "$OPTION" == "1" ]; then
+    if [ "$OPTION" -eq "1" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -127,7 +127,7 @@ if [ "$LANG" == "en" ]; then
         echo """
         Complete updates
         """
-    elif [ "$OPTION" == "2" ]; then
+    elif [ "$OPTION" -eq "2" ]; then
         apt update
         apt-get update
         apt upgrade -y;
@@ -163,11 +163,11 @@ if [ "$LANG" == "en" ]; then
     (1)Reboot (2)Shutdown (s)Skip
     """
     read UPD
-    if [ "$UPD" == "1" ]; then
+    if [ "$UPD" -eq "1" ]; then
         reboot now;
-    elif [ "$UPD" == "2" ]; then
+    elif [ "$UPD" -eq "2" ]; then
         shutdown now;
-    elif [ "$UPD" == "s" ]; then
+    elif [ "$UPD" -eq "s" ]; then
         echo "Thank you for your preference"
         exit 1
     else
