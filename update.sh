@@ -7,13 +7,13 @@
 #--------------------------------------------------#
 
 echo """
-English-speaking [en]
-Falante de língua portuguesa [pt]
+English-speaking [1]
+Falante de língua portuguesa [2]
 """
 read LANG
 echo ""
 
-if [ "$LANG" -eq "pt" ]; then
+if [ "$LANG" -eq "2" ]; then
 
 ## PORTUGUESE
 
@@ -94,7 +94,7 @@ if [ "$LANG" -eq "pt" ]; then
     fi
 fi
 
-if [ "$LANG" -eq "en" ]; then
+if [ "$LANG" -eq "1" ]; then
 
 ## ENGLISH
 
