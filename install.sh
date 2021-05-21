@@ -17,11 +17,11 @@ if [ "$LANG" -eq "2" ]; then
 
 ## PORTUGUESE
     echo """
-    -------------------------------------
-    ESTE SCRIPT RODA APENAS EM MODO ROOT.
-    -------------------------------------
+-------------------------------------
+ESTE SCRIPT RODA APENAS EM MODO ROOT.
+-------------------------------------
 
-    Opcoes: (1)Iniciante (2)Experiente
+Opcoes: (1)Iniciante (2)Experiente
     """
     read OPTION
     echo ""
@@ -43,9 +43,16 @@ if [ "$LANG" -eq "2" ]; then
         cd ~
 
     elif [ "$OPTION" -eq "2" ]; then
+        echo "Digite o seu nome do GitHub"
+	read NAME
+	echo ""
+	echo "Digite seu E-Mail do GitHub"
+	read EMAIL
+	echo ""
 
         apt install git -y;
         apt install wget -y;
+	apt install nmap -y;
         mkdir /home/$USER/Downloads/Apps
         cd /home/$USER/Downloads/Apps
         wget https://az764295.vo.msecnd.net/stable/5d424b828ada08e1eb9f95d6cb41120234ef57c7/code_1.53.1-1612827767_amd64.deb
@@ -56,6 +63,8 @@ if [ "$LANG" -eq "2" ]; then
         cd /home/$USER/Downloads
         rm -r Apps
         cd ~
+	git config --global user.name "$NAME"
+	git config --global user.email "$EMAIL"
 
     else
         echo "Comando nao reconhecido"
