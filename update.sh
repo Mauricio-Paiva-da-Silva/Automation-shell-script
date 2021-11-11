@@ -91,6 +91,8 @@ if [ "$LANG" -eq "2" ]; then
         exit 1
     else
         echo "Comando nao reconhecido"
+	echo ""
+	echo "Obrigado pela preferencia"
     fi
 fi
 
